@@ -18,7 +18,7 @@ console.log("Website is in progress...");
 
 //   splide.mount();
 
-// slider logic
+// slider - logic
 let sliderContainer = document.getElementById("sliderContainer");
 let slider = document.getElementById("slider");
 let cards = slider.getElementsByTagName("li");
@@ -67,6 +67,16 @@ function next() {
       +slider.style.marginLeft.slice(0, -2) - cardWidth + "px";
   }
 }
+
+//scroll to the top - logic
+const scrollToTopButton = document.getElementById("scroll-arrow");
+
+scrollToTopButton.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Optional: For a smoother scrolling effect
+  });
+});
 
 //number increment animation logic
 // Number.prototype.format = function (n) {
