@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind Frontend</title>
+    <title>Just Home</title>
     <link rel="stylesheet" href="../src/css/output.css">
     <link rel="shortcut icon" href="./public/assets/images/siteLogo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -16,14 +16,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 <body>
     <!-- header and hero section start  -->
     <div
-        class="h-screen mx-2 bg-cover bg-[url('../../public/assets/images/heroBgImage.webp')] bg-no-repeat rounded-3xl">
+        class="lg:h-screen mx-2 bg-cover bg-[url('../../public/assets/images/heroBgImage.webp')] bg-no-repeat rounded-3xl">
         <header>
             <nav>
                 <!-- container section start  -->
                 <div class="max-w-full px-5 w-full mx-auto my-2">
                     <!-- header start here -->
                     <div
-                        class="font-manrope h-20 w-full flex justify-between sm:justify-between xl:flex-wrap xl:flex-row items-center xl:justify-between md:flex-col md:gap-5">
+                        class="flex font-manrope h-20 w-full justify-between sm:justify-between xl:flex-wrap xl:flex-row items-center xl:justify-between md:flex-col md:gap-5">
 
                         <!-- hamburger menu starts here  -->
                         <div class="w-6 md:hidden text-black">
@@ -38,8 +38,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         <!-- logo start here  -->
                         <div class="logo">
                             <a href="/">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="43" viewBox="0 0 150 43"
-                                    fill="none">
+                                <svg class="w-32" xmlns="http://www.w3.org/2000/svg" width="150" height="43"
+                                    viewBox="0 0 150 43" fill="none">
                                     <g clip-path="url(#clip0_2_432)">
                                         <g clip-path="url(#clip1_2_432)">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -89,7 +89,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         <!-- nav items start here  -->
                         <!-- <div class="hidden md:visible md:flex w-full justify-between flex-wrap items-center"> -->
                         <!-- nav items start  -->
-                        <div class="w-[40%]">
+                        <div class="xl:w-[40%] hidden md:block md:w-3/4">
                             <ul class="flex flex-1 items-center list-none justify-between">
                                 <!-- home li start -->
                                 <li class="relative group">
@@ -257,7 +257,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         <!-- nav items end here  -->
 
                         <!-- header right section start  -->
-                        <div class="flex w-[22%] justify-around">
+                        <div class="md:flex xl:w-[25%] justify-around hidden md:w-1/2">
                             <!-- phone number section start  -->
                             <div class="flex gap-1 items-center text-white">
                                 <span>
@@ -316,16 +316,20 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <!-- container start -->
         <div class="max-w-screen-xl mx-auto my-5 px-5">
             <!-- let us guide your home start  -->
-            <div class="text-center w-full my-44">
+            <div class="text-center w-full lg:my-44 sm:my-2 md:my-24 sm:py-14">
                 <button
                     class="border border-white text-white px-3 py-1 rounded-4xl text-sm md:text-base lg:text-lg hover:bg-black hover:text-white transition-all">
                     LET US GUIDE YOUR HOME
                 </button>
                 <!-- let us guide your home end  -->
-                <h1 class="text-6xl font-bold text-center mb-4 text-white my-10">Discover a place you'll <br> love to
+                <h1
+                    class="xl:text-6xl sm:text-2xl md:text-3xl lg:text:4xl font-bold text-center mb-4 text-white my-10 sm:my-5">
+                    Discover a place
+                    you'll <br>
+                    love to
                     live
                 </h1>
-                <div class="w-full max-w-2xl mx-auto mt-10">
+                <div class="lg:w-full max-w-2xl mx-auto mt-10 sm:w-96">
                     <div class="relative">
                         <input
                             class="w-full bg-white placeholder:text-black text-slate-700 text-sm border border-slate-200 rounded-4xl pl-6 pr-14 py-3 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
@@ -774,7 +778,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!-- container end -->
 
     <!-- why choose us section start  -->
-    <div class="py-14 mx-2 bg-cover bg-[#E7C873] bg-no-repeat rounded-3xl mt-20">
+    <div class="py-14 mx-2 bg-[#E7C873] rounded-3xl mt-20">
         <h2 class="text-center text-4xl font-bold">Why Choose Us</h2>
         <p class="text-center mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
