@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="../src/css/output.css">
     <link rel="shortcut icon" href="./public/assets/images/siteLogo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- <link href="
-https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
-" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -354,15 +351,15 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!-- header and hero section end  -->
 
     <!-- homes for you section start  -->
-    <div class="max-w-full bg-[#F6F8FA] mx-2 mt-20 rounded-3xl py-20">
+    <div class="max-w-full bg-gray-100 mx-2 mt-20 rounded-3xl py-20">
         <!-- container start -->
         <div class="max-w-screen-xl mx-auto my-5 px-5">
-            <h2 class="text-4xl font-bold text-center mb-4">Homes For You</h2>
-            <p class="text-center">Based on your view history</p>
+            <h2 class="text-center text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold">Homes For You</h2>
+            <p class="text-center text-sm sm:text-base mt-3">Based on your view history</p>
             <!-- </div> -->
 
             <!-- homes for you boxes section starts -->
-            <div class="w-full mx-auto flex justify-between mt-16">
+            <div class="w-full mx-auto flex flex-wrap xl:flex-nowrap justify-between mt-16">
                 <!-- previous button start  -->
                 <div class="flex items-center">
                     <button onclick="prev()" class="rounded-full px-2 py-2 shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
@@ -376,29 +373,31 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
                 <!-- boxes section start  -->
                 <div id="sliderContainer" class="w-full">
-                    <ul id="slider" class="w-full h-full flex items-center justify-center">
+                    <ul id="slider" class="w-full h-full flex flex-wrap items-center justify-center">
                         <!-- homes for you box 1 start  -->
                         <li class="w-1/3 px-2">
-                            <div class="h-[420px] mb-5 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
+                            <div class="h-96 mb-5 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
                                 <!-- box image start  -->
                                 <div class="w-full background relative">
                                     <img class="rounded-tl-2xl rounded-tr-2xl object-cover"
                                         src="./public/assets/images/homeBoxImg1.jpg" alt="Homes For You Box Image 1">
                                     <span
-                                        class="absolute top-4 left-4 bg-[#1F4B43] px-2 py-1.5 text-white text-sm font-medium rounded-2xl cursor-pointer hover:bg-[#61807a] hover:scale-110">FOR
+                                        class="absolute top-4 left-4 bg-teal-800 px-2 py-1.5 text-white text-sm font-medium rounded-2xl cursor-pointer hover:bg-teal-600 hover:scale-110">FOR
                                         SALE</span>
                                 </div>
                                 <!-- box image end  -->
 
                                 <!-- box text start  -->
-                                <div class="flex mt-4 justify-between px-5">
-                                    <div class="text-black text-lg font-medium">Skyper Pool Apartment</div>
-                                    <span class="text-[#EB664E] text-xl font-semibold">$280,000</span>
+                                <div class="flex flex-wrap mt-4 justify-between px-5">
+                                    <div class="font-medium text-sm sm:text-lg text-center lg:text-start">Skyper Pool
+                                        Apartment</div>
+                                    <span
+                                        class="text-red-500 text-sm sm:text-base md:text-xl font-semibold">$280,000</span>
                                 </div>
                                 <div class="flex mt-4 px-5 items-center">
                                     <div class="locationIcon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <svg class="size-4 sm:size-5 lg:size-6" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -406,10 +405,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                         </svg>
 
                                     </div>
-                                    <span class="font-normal text-base px-1">1020 Bloomingdale Ave</span>
+                                    <span class="font-normal text-sm sm:text-base px-1">1020 Bloomingdale Ave</span>
                                 </div>
                                 <!-- property detials start  -->
-                                <div class="flex mt-4 gap-5 px-5">
+                                <div class="flex flex-wrap mt-4 gap-5 px-5">
                                     <!-- bed details start  -->
                                     <div class="flex gap-2 items-center">
                                         <div class="px-0">
@@ -420,7 +419,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                                     fill="#1A1A1A" />
                                             </svg>
                                         </div>
-                                        <p>4 Beds</p>
+                                        <p class="font-normal text-sm sm:text-base">4 Beds</p>
                                     </div>
                                     <!-- bed details end  -->
 
@@ -434,7 +433,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                                     fill="#1A1A1A" />
                                             </svg>
                                         </div>
-                                        <p>2 Baths</p>
+                                        <p class="font-normal text-sm sm:text-base">2 Baths</p>
                                     </div>
                                     <!-- bath details end  -->
 
@@ -448,7 +447,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                                     fill="#1A1A1A" />
                                             </svg>
                                         </div>
-                                        <p>450 sqft</p>
+                                        <p class="font-normal text-sm sm:text-base">450 sqft</p>
                                     </div>
                                     <!-- square foot details end  -->
                                 </div>
@@ -459,7 +458,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
                         <!-- homes for you box 2 start  -->
                         <li class="w-1/3 px-2">
-                            <div class="h-[420px] mb-5 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
+                            <div class="h-96 mb-5 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
                                 <!-- box image start  -->
                                 <div class="w-full background relative">
                                     <img class="rounded-tl-2xl rounded-tr-2xl object-cover"
@@ -539,7 +538,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
                         <!-- homes for you box 3 start  -->
                         <li class="w-1/3 px-2">
-                            <div class="h-[420px] mb-5 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
+                            <div class="h-96 mb-5 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
                                 <!-- box image start  -->
                                 <div class="w-full background relative">
                                     <img class="rounded-tl-2xl rounded-tr-2xl object-cover"
@@ -637,55 +636,58 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         </div>
         <!-- container end -->
     </div>
+    <!-- homes for you section end  -->
 
     <!-- container start -->
     <div class="max-w-screen-xl mx-auto my-5 px-5">
         <!-- find properties section start  -->
         <div class="w-full mt-20">
-            <h2 class="text-4xl font-medium text-center mb-4">Find Properties in These Cities</h2>
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 class="text-center text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold">Find Properties in These Cities
+            </h2>
+            <p class="text-center text-sm sm:text-base mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
 
-            <div class="flex gap-5 w-full mt-12">
+            <div class="flex flex-col lg:flex-row gap-5 w-full mt-12">
                 <!-- left gallery section start  -->
-                <div class="left w-1/2 text-white">
+                <div class="w-full lg:w-1/2 text-white">
                     <div
-                        class="top px-6 py-5  text-base bg-[url('../../public/assets/images/findPropertyLeftImg1.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-[360px] rounded-2xl bg-no-repeat">
-                        8 Properties
-                        <p class="font-medium text-xl">New York</p>
+                        class="top px-6 py-5 text-base bg-[url('../../public/assets/images/findPropertyLeftImg1.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-72 lg:h-96 rounded-2xl bg-no-repeat">
+                        <span>8 Properties</span>
+                        <p class="font-medium text-lg lg:text-xl">New York</p>
                     </div>
-                    <div class="flex gap-5">
+                    <div class="flex flex-col md:flex-row gap-2.5 md:gap-5 mt-2.5 md:mt-5">
                         <div
-                            class="bottom1 px-6 py-5 text-base bg-[url('../../public/assets/images/findPropertyLeftImg2.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-[360px] w-[50%] mt-5 rounded-2xl">
-                            0 Properties
-                            <p class="font-medium text-xl">San Diego</p>
+                            class="bottom1 px-6 py-5 text-base bg-[url('../../public/assets/images/findPropertyLeftImg2.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-72 lg:h-96 w-full md:w-1/2 rounded-2xl">
+                            <span>0 Properties</span>
+                            <p class="font-medium text-lg lg:text-xl">San Diego</p>
                         </div>
                         <div
-                            class="bottom2 px-6 py-5 text-base bg-[url('../../public/assets/images/findPropertyLeftImg3.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-[360px] w-[50%] mt-5 rounded-2xl">
-                            3 Properties
-                            <p class="font-medium text-xl">Florida</p>
+                            class="bottom2 px-6 py-5 text-base bg-[url('../../public/assets/images/findPropertyLeftImg3.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-72 lg:h-96 w-full md:w-1/2 rounded-2xl">
+                            <span>3 Properties</span>
+                            <p class="font-medium text-lg lg:text-xl">Florida</p>
                         </div>
                     </div>
                 </div>
                 <!-- left gallery section end  -->
 
                 <!-- right gallery section start  -->
-                <div class="right w-1/2">
-                    <div class="flex gap-5 text-white">
+                <div class="w-full lg:w-1/2">
+                    <div class="flex flex-col md:flex-row gap-2.5 md:gap-5 text-white">
                         <div
-                            class="bottom1 px-6 py-5 text-base bg-[url('../../public/assets/images/findPropertyRightImg1.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-[360px] w-1/2 rounded-2xl">
-                            2 Properties
-                            <p class="font-medium text-xl">Chicago</p>
+                            class="bottom1 px-6 py-5 text-base bg-[url('../../public/assets/images/findPropertyRightImg1.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-72 lg:h-96 w-full md:w-1/2 rounded-2xl">
+                            <span>2 Properties</span>
+                            <p class="font-medium text-lg lg:text-xl">Chicago</p>
                         </div>
                         <div
-                            class="bottom2 px-6 py-5 text-base bg-[url('../../public/assets/images/findPropertyRightImg2.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-[360px] w-1/2 rounded-2xl">
-                            1 Properties
-                            <p class="font-medium text-xl">Los Angeles</p>
+                            class="bottom2 px-6 py-5 text-base bg-[url('../../public/assets/images/findPropertyRightImg2.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-72 lg:h-96 w-full md:w-1/2 rounded-2xl">
+                            <span>1 Properties</span>
+                            <p class="font-medium text-lg lg:text-xl">Los Angeles</p>
                         </div>
                     </div>
                     <div
-                        class="top px-6 py-5 mt-5 text-white text-base bg-[url('../../public/assets/images/findPropertyRightImg3.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-[360px] rounded-2xl bg-no-repeat">
-                        2 Properties
-                        <p class="font-medium text-xl">Miami</p>
+                        class="top px-6 py-5 mt-2.5 md:mt-5 text-white text-base bg-[url('../../public/assets/images/findPropertyRightImg3.jpg')] backdrop-opacity-85 bg-zinc-700 bg-blend-soft-light h-72 lg:h-96 rounded-2xl bg-no-repeat">
+                        <span>2 Properties</span>
+                        <p class="font-medium text-lg lg:text-xl">Miami</p>
                     </div>
                 </div>
                 <!-- right gallery section end  -->
@@ -696,14 +698,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!-- container end -->
 
     <!-- why choose us section start  -->
-    <div class="py-14 mx-2 bg-[#E7C873] rounded-3xl mt-20">
-        <h2 class="text-center text-4xl font-bold">Why Choose Us</h2>
-        <p class="text-center mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="py-14 mx-2 bg-amber-200 rounded-3xl mt-20">
+        <h2 class="text-center text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold">Why Choose Us</h2>
+        <p class="text-center text-sm sm:text-base mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
         <!-- container start -->
         <div class="max-w-screen-xl mx-auto my-5 px-5">
             <!-- choose us boxes section start  -->
-            <div class="flex gap-4 mt-20 w-full">
+            <div class="flex flex-wrap justify-center xl:flex-nowrap items-center gap-4 mt-10 md:mt-14 lg:mt-20 w-full">
                 <!-- box 1 start  -->
                 <div class="w-80">
                     <div class="flex justify-center items-center">
@@ -713,7 +715,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 fill="#1A1A1A" />
                         </svg>
                     </div>
-                    <p class="font-bold text-center mt-2">Find your future home</p>
+                    <p class="font-bold text-center mt-3">Find your future home</p>
                     <p class="text-center mt-2 font-normal">We help you find a new home by offering a smart real estate
                         experience</p>
                 </div>
@@ -728,7 +730,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 fill="#1A1A1A" />
                         </svg>
                     </div>
-                    <p class="font-bold text-center mt-2">Experienced agents</p>
+                    <p class="font-bold text-center mt-3">Experienced agents</p>
                     <p class="text-center mt-2 font-normal">Find an experienced agent who knows your market best</p>
                 </div>
                 <!-- box 2 end -->
@@ -750,7 +752,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </defs>
                         </svg>
                     </div>
-                    <p class="font-bold text-center mt-2">Buy or rent homes</p>
+                    <p class="font-bold text-center mt-3">Buy or rent homes</p>
                     <p class="text-center mt-2 font-normal">Millions of houses and apartments in your favourite cities
                     </p>
                 </div>
@@ -765,7 +767,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 fill="#1A1A1A" />
                         </svg>
                     </div>
-                    <p class="font-bold text-center mt-2">List your own property</p>
+                    <p class="font-bold text-center mt-3">List your own property</p>
                     <p class="text-center mt-2 font-normal">Sign up now and sell or rent your own properties</p>
                 </div>
                 <!-- box 4 end -->
@@ -778,7 +780,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!-- container start -->
     <div class="max-w-screen-xl mx-auto my-5 px-5">
         <!-- best properties container start -->
-        <div class="w-full text-white">
+        <div class="w-full mt-10 sm:mt-18 md:mt-24 xl:mt-24">
             <h2 class="text-lg sm:text-xl md:text-2xl lg:text-4xl text-center font-bold">Best
                 Properties</h2>
             <p class="text-center text-sm sm:text-base mt-5">Lorem ipsum dolor sit amet, consectetur
@@ -869,10 +871,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 <div
                     class="md:w-full lg:w-1/2 relative bg-[url('../../public/assets/images/bestPropertiesRightImg.jpg')] backdrop-opacity-85 bg-zinc-600 bg-blend-soft-light rounded-2xl">
                     <span
-                        class="absolute top-4 left-4 bg-[#1F4B43] px-3 py-1.5 text-white text-sm font-medium rounded-2xl cursor-pointer hover:bg-[#61807a] hover:scale-110">FOR
+                        class="absolute top-4 left-4 bg-neutral-700 px-3 py-1.5 text-white text-sm font-medium rounded-2xl cursor-pointer hover:bg-neutral-600 hover:scale-110">FOR
                         SALE</span>
                     <span
-                        class="absolute top-4 left-28 bg-[#E7C873] px-2 py-1.5 text-black text-sm font-medium rounded-2xl cursor-pointer hover:bg-[#b4a885] hover:scale-110">FEATURED
+                        class="absolute top-4 left-28 bg-amber-200 px-2 py-1.5 text-black text-sm font-medium rounded-2xl cursor-pointer hover:bg-neutral-50 hover:scale-110">FEATURED
                     </span>
 
                     <!-- image inside text start -->
@@ -950,73 +952,80 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </div>
     <!-- container end -->
 
-    <!-- local expertise section start -->
-    <div class="bg-[#1F4B43] py-20 mt-20 mx-2 rounded-2xl">
+    <!-- local expertise background section start -->
+    <div class="bg-teal-900 py-10 sm:py-14 lg:py-20 mt-20 mx-2 rounded-2xl">
         <!-- container start -->
         <div class="max-w-screen-xl mx-auto px-5 my-5">
-            <div class="flex w-full justify-between items-center">
+            <!-- local expertise container start -->
+            <div class="flex flex-col md:flex-row gap-2 sm:gap-3 lg:gap-0 w-full justify-between items-center">
                 <!-- left container start -->
-                <div class="w-1/2 rounded-2xl relative">
-                    <img src="./public/assets/images/expertiseImg.png" alt="Local Expertise Image">
-                    <div class="absolute top-6 left-6">
-                        <img src="./public/assets/images/expertiseImg2.png" alt="Local Expertise Image 2">
+                <div class="w-full md:w-1/2 rounded-2xl relative flex justify-center">
+                    <img class="h-96 md:h-full" src="./public/assets/images/expertiseImg.png"
+                        alt="Local Expertise Image">
+                    <div class="absolute left-14 sm:left-40 top-6 md:left-6">
+                        <img class="w-40 lg:w-full" src="./public/assets/images/expertiseImg2.png"
+                            alt="Local Expertise Image 2">
                     </div>
                 </div>
                 <!-- left container end -->
 
                 <!-- right container start -->
-                <div class="w-96 text-white">
-                    <p class="font-medium text-5xl">Local expertise for luxury homes</p>
-                    <p class="text-base font-normal mt-5">Pellentesque egestas elementum egestas faucibus sem. Velit
-                        nunc
-                        egestas ut morbi. Leo diam diam
-                        nibh
-                        eget fermentum massa pretium. Mi mauris nulla ac dictum ut mauris non.</p>
-                    <button
-                        class="px-4 py-3.5 mt-5 text-base flex items-center gap-3 bg-[#E7C873] rounded-xl text-black cursor-pointer hover:bg-[#b9ab88]"
-                        onclick="alert('Homes has been sold!')">Learn
-                        More
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 20" stroke-width="1.5"
-                                stroke="currentColor" class="size-5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
+                <div class="w-full md:w-96 text-white">
+                    <p class="text-lg sm:text-xl md:text-2xl lg:text-4xl text-center md:text-start font-bold">
+                        Local
+                        expertise for luxury homes</p>
+                    <p class="text-center md:text-start text-sm sm:text-base mt-5">Pellentesque egestas elementum
+                        egestas faucibus
+                        sem. Velit nunc
+                        egestas ut morbi. Leo diam diam nibh eget fermentum massa pretium. Mi mauris nulla ac dictum ut
+                        mauris non.</p>
+                    <span class="flex justify-center lg:justify-start">
+                        <button
+                            class="px-2 py-2.5 lg:px-4 lg:py-3.5 mt-5 text-base flex items-center gap-2 lg:gap-3 bg-amber-200 rounded-xl text-black cursor-pointer hover:bg-neutral-200"
+                            onclick="alert('Homes has been sold!')">Learn
+                            More
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 20"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
 
-                        </span>
-                    </button>
+                            </span>
+                        </button>
+                    </span>
                 </div>
                 <!-- right container end -->
             </div>
-
+            <!-- local expertise container end -->
             <!-- local expertise details start -->
-            <div class="flex gap-5 justify-between mt-20">
+            <div class="flex flex-wrap gap-5 justify-center md:justify-between mt-10 sm:mt-14 lg:mt-20">
                 <!-- box detail 1 start -->
                 <div class="text-center">
-                    <p class="font-medium text-4xl text-[#E7C873]">$18M</p>
-                    <p class="mt-3 text-base text-white">Owned from properties transactions</p>
+                    <p class="font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl text-amber-200">$18M</p>
+                    <p class="mt-3 text-sm sm:text-base text-white">Owned from properties transactions</p>
                 </div>
                 <!-- box detail 1 end -->
                 <!-- box detail 2 start -->
                 <div class="text-center">
-                    <p class="font-medium text-4xl text-[#E7C873]">26K</p>
-                    <p class="mt-3 text-base text-white">Properties for buy</p>
+                    <p class="font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl text-amber-200">26K</p>
+                    <p class="mt-3 text-sm sm:text-base text-white">Properties for buy</p>
                 </div>
                 <!-- box detail 2 end -->
                 <!-- box detail 3 start -->
                 <div class="text-center">
-                    <p class="font-medium text-4xl text-[#E7C873]">15K</p>
-                    <p class="mt-3 text-base text-white">Properties for sell</p>
+                    <p class="font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl text-amber-200">15K</p>
+                    <p class="mt-3 text-sm sm:text-base text-white">Properties for sell</p>
                 </div>
                 <!-- box detail 3 end -->
                 <!-- box detail 4 start -->
                 <div class="text-center">
-                    <p class="count font-medium text-4xl text-[#E7C873]">800</p>
-                    <p class="mt-3 text-base text-white">Daily Completed Transactions</p>
+                    <p class="count font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl text-amber-200">800</p>
+                    <p class="mt-3 text-sm sm:text-base text-white">Daily Completed Transactions</p>
                 </div>
                 <!-- box detail 4 end -->
             </div>
-            <!-- local expertise details start -->
+            <!-- local expertise background details end -->
         </div>
         <!-- container end -->
     </div>
@@ -1156,17 +1165,19 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!-- container end -->
 
     <!-- recent article and news section start -->
-    <div class="bg-[#F9F9F9] mx-2 rounded-2xl mt-10 py-20">
+    <div class="bg-neutral-50 mx-2 rounded-2xl mt-10 py-20">
         <!-- container start -->
         <div class="max-w-screen-xl mx-auto my-5 px-5">
             <div class="w-full">
-                <h1 class="text-4xl font-medium text-center mb-4">Recent Articles & News</h1>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h1 class="text-center text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold">Recent Articles & News</h1>
+                <p class="text-center text-sm sm:text-base mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.</p>
 
                 <!-- recent article and news cards start -->
-                <div class="flex gap-3 w-full mt-10">
+                <div
+                    class="flex flex-col md:flex-row flex-wrap xl:flex-nowrap justify-center items-center xl:justify-start gap-3 w-full mt-10">
                     <!-- news card 1 start -->
-                    <div class="w-1/4 rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
+                    <div class="w-96 md:w-80 lg:w-1/4 rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
                         <div class="w-full">
                             <img class="rounded-tl-2xl rounded-tr-2xl" src="./public/assets/images/newsImage1.jpg"
                                 alt="Article and News Image 1">
@@ -1174,10 +1185,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         <div class="mt-3">
                             <ul class="flex gap-5 justify-center">
                                 <li>Apartment</li>
-                                <li class="list-disc mx-3">March 19, 2024</li>
+                                <li class="list-disc mx-3 text-sm sm:text-base">March 19, 2024</li>
                             </ul>
                         </div>
-                        <p class="text-center mt-3 font-medium">Housing Markets That Changed <br>
+                        <p class="text-center mt-3 font-medium text-sm sm:text-base">Housing Markets That Changed <br>
                             the Most This Week
                         </p>
                         <div class="flex justify-center items-center my-2">
@@ -1197,7 +1208,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <!-- news card 1 end -->
 
                     <!-- news card 2 start -->
-                    <div class="w-1/4 rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
+                    <div class="w-96 md:w-80 lg:w-1/4 rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
                         <div class="w-full">
                             <img class="rounded-tl-2xl rounded-tr-2xl" src="./public/assets/images/newsImage2.jpg"
                                 alt="Article and News Image 1">
@@ -1205,10 +1216,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         <div class="mt-3">
                             <ul class="flex gap-5 justify-center">
                                 <li>Apartment</li>
-                                <li class="list-disc mx-3">March 19, 2024</li>
+                                <li class="list-disc mx-3 text-sm sm:text-base">March 19, 2024</li>
                             </ul>
                         </div>
-                        <p class="text-center mt-3 font-medium">Read Unveils the Best Canadian <br>
+                        <p class="text-center mt-3 font-medium text-sm sm:text-base">Read Unveils the Best Canadian <br>
                             Cities for Biking
                         </p>
                         <div class="flex justify-center items-center my-2">
@@ -1228,7 +1239,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <!-- news card 2 end -->
 
                     <!-- news card 3 start -->
-                    <div class="w-1/4 rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
+                    <div class="w-96 md:w-80 lg:w-1/4 rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
                         <div class="w-full">
                             <img class="rounded-tl-2xl rounded-tr-2xl" src="./public/assets/images/newsImage3.jpg"
                                 alt="Article and News Image 1">
@@ -1236,10 +1247,11 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         <div class="mt-3">
                             <ul class="flex gap-5 justify-center">
                                 <li>Office</li>
-                                <li class="list-disc mx-3">March 19, 2024</li>
+                                <li class="list-disc mx-3 text-sm sm:text-base">March 19, 2024</li>
                             </ul>
                         </div>
-                        <p class="text-center mt-3 font-medium">10 Walkable Cities Where You Can <br>
+                        <p class="text-center mt-3 font-medium text-sm sm:text-base">10 Walkable Cities Where You Can
+                            <br>
                             Live Affordably
                         </p>
                         <div class="flex justify-center items-center my-2">
@@ -1259,7 +1271,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <!-- news card 3 end -->
 
                     <!-- news card 4 start -->
-                    <div class="w-1/4 rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
+                    <div class="w-96 md:w-80 lg:w-1/4 rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
                         <div class="w-full">
                             <img class="rounded-tl-2xl rounded-tr-2xl" src="./public/assets/images/newsImage3.jpg"
                                 alt="Article and News Image 1">
@@ -1267,10 +1279,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         <div class="mt-3">
                             <ul class="flex gap-5 justify-center">
                                 <li>Shop</li>
-                                <li class="list-disc mx-3">March 19, 2024</li>
+                                <li class="list-disc mx-3 text-sm sm:text-base">March 19, 2024</li>
                             </ul>
                         </div>
-                        <p class="text-center mt-3 font-medium">New Apartment Nice in the Best <br>
+                        <p class="text-center mt-3 font-medium text-sm sm:text-base">New Apartment Nice in the Best <br>
                             Canadian Cities
                         </p>
                         <div class="flex justify-center items-center my-2">
@@ -1330,7 +1342,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 <!-- second ul list items end -->
 
                 <!-- third ul list items start -->
-                <ul class=" leading-8">
+                <ul class="leading-8">
                     <li><a href="">Real Estate Chicago</a></li>
                     <li><a href="">Real Estate Cook</a></li>
                     <li><a href="">Real Estate kane</a></li>
@@ -1357,7 +1369,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!-- container end -->
 
     <!-- real state agent background start -->
-    <div class="mx-2 bg-[#FFF8F6] mt-20">
+    <div class="mx-2 bg-neutral-50 mt-20">
         <!-- container start -->
         <div class="max-w-screen-xl mx-auto my-5 px-5">
             <div class="flex justify-between">
@@ -1368,7 +1380,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 </div>
                 <div class="flex items-center">
                     <button
-                        class="px-4 py-3.5 mt-5 text-base flex items-center gap-3 bg-[#E7C873] rounded-xl text-black cursor-pointer hover:bg-[#b9ab88]"
+                        class="px-4 py-3.5 mt-5 text-base flex items-center gap-3 bg-amber-200 rounded-xl text-black cursor-pointer hover:bg-neutral-200"
                         onclick="alert('Homes has been sold!')">Register Now<span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 20" stroke-width="1.5"
                                 stroke="currentColor" class="size-5">
