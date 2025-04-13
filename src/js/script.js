@@ -1,5 +1,15 @@
 console.log("Website is in progress...");
 
+//scroll to the top - logic
+const scrollToTopButton = document.getElementById("scroll-arrow");
+
+scrollToTopButton.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Optional: For a smoother scrolling effect
+  });
+});
+
 // const currloc = location.href;
 // const menuItem = document.querySelectorAll("a");
 // const menuLen = menuItem.length;
@@ -19,64 +29,54 @@ console.log("Website is in progress...");
 //   splide.mount();
 
 // slider - logic
-let sliderContainer = document.getElementById("sliderContainer");
-let slider = document.getElementById("slider");
-let cards = slider.getElementsByTagName("li");
+// let sliderContainer = document.getElementById("sliderContainer");
+// let slider = document.getElementById("slider");
+// let cards = slider.getElementsByTagName("li");
 
-let elememtsToShow = 3;
-if (document.body.clientWidth < 1000) {
-  elememtsToShow = 2;
-} else if (document.body.clientWidth < 1500) {
-  elememtsToShow = 3;
-}
+// let elememtsToShow = 3;
+// if (document.body.clientWidth < 1000) {
+//   elememtsToShow = 2;
+// } else if (document.body.clientWidth < 1500) {
+//   elememtsToShow = 3;
+// }
 
-let sliderContainerWidth = sliderContainer.clientWidth;
+// let sliderContainerWidth = sliderContainer.clientWidth;
 
-let cardWidth = sliderContainerWidth / elememtsToShow;
+// let cardWidth = sliderContainerWidth / elememtsToShow;
 
-sliderContainer.style.overflow = "hidden";
+// sliderContainer.style.overflow = "hidden";
 
-slider.style.width = cards.length * cardWidth + "px";
-slider.style.transition = "margin";
-slider.style.transitionDuration = "1s";
+// slider.style.width = cards.length * cardWidth + "px";
+// slider.style.transition = "margin";
+// slider.style.transitionDuration = "1s";
 
-for (let index = 0; index < cards.length; index++) {
-  const element = cards[index];
-  element.style.width = cardWidth + "px";
-}
+// for (let index = 0; index < cards.length; index++) {
+//   const element = cards[index];
+//   element.style.width = cardWidth + "px";
+// }
 
-function prev() {
-  if (
-    +slider.style.marginLeft.slice(0, -2) !=
-    cardWidth * (cards.length - elememtsToShow)
-  ) {
-    slider.style.marginLeft =
-      +slider.style.marginLeft.slice(0, -2) + cardWidth + "px";
-  } else {
-    slider.style.marginLeft =
-      +slider.style.marginLeft.slice(0, -2) - cardWidth + "px";
-  }
-}
+// function prev() {
+//   if (
+//     +slider.style.marginLeft.slice(0, -2) !=
+//     cardWidth * (cards.length - elememtsToShow)
+//   ) {
+//     slider.style.marginLeft =
+//       +slider.style.marginLeft.slice(0, -2) + cardWidth + "px";
+//   } else {
+//     slider.style.marginLeft =
+//       +slider.style.marginLeft.slice(0, -2) - cardWidth + "px";
+//   }
+// }
 
-function next() {
-  if (+slider.style.marginLeft.slice(0, -2) != 0) {
-    slider.style.marginLeft =
-      +slider.style.marginLeft.slice(0, -2) - cardWidth + "px";
-  } else {
-    slider.style.marginLeft =
-      +slider.style.marginLeft.slice(0, -2) - cardWidth + "px";
-  }
-}
-
-//scroll to the top - logic
-const scrollToTopButton = document.getElementById("scroll-arrow");
-
-scrollToTopButton.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // Optional: For a smoother scrolling effect
-  });
-});
+// function next() {
+//   if (+slider.style.marginLeft.slice(0, -2) != 0) {
+//     slider.style.marginLeft =
+//       +slider.style.marginLeft.slice(0, -2) - cardWidth + "px";
+//   } else {
+//     slider.style.marginLeft =
+//       +slider.style.marginLeft.slice(0, -2) - cardWidth + "px";
+//   }
+// }
 
 //number increment animation logic
 // Number.prototype.format = function (n) {
