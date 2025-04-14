@@ -10,6 +10,25 @@ scrollToTopButton.addEventListener("click", function () {
   });
 });
 
+// sidebar logic
+
+// const sidebar = document.getElementById("sidebar");
+// const hamburger = document.getElementById("hamburger");
+// const closeBtn = document.getElementById("closeBtn");
+// const backdrop = document.getElementById("backdrop");
+
+// function openSidebar() {
+//   sidebar.classList.remove("-translate-x-full");
+// }
+
+// function closeSidebar() {
+//   sidebar.classList.add("-translate-x-full");
+// }
+
+// hamburger.addEventListener("click", openSidebar);
+// closeBtn.addEventListener("click", closeSidebar);
+// backdrop.addEventListener("click", closeSidebar);
+
 // const currloc = location.href;
 // const menuItem = document.querySelectorAll("a");
 // const menuLen = menuItem.length;
