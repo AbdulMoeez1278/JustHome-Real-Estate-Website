@@ -15,15 +15,23 @@ cross.addEventListener("click", () => {
   cross.style.display = "none";
 });
 
-//scroll to the top - logic
-// const scrollToTopButton = document.getElementById("scroll-arrow");
+// scroll to the top
+const scrollToTop = document.getElementById("arrowScroll");
 
-// scrollToTopButton.addEventListener("click", function () {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: "smooth",
-//   });
-// });
+window.onscroll = () => {
+  if (window.scrollY > 500) {
+    arrowScroll.style.opacity = "1";
+  } else {
+    arrowScroll.style.opacity = "0";
+  }
+};
+
+scrollToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
 
 // swiper js library
 const swiper = new Swiper(".swiper", {
