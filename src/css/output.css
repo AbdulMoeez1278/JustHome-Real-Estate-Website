@@ -1860,6 +1860,11 @@
       margin-top: calc(var(--spacing) * 40);
     }
   }
+  .lg\:block {
+    @media (width >= 64rem) {
+      display: block;
+    }
+  }
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
@@ -2134,14 +2139,17 @@
     }
   }
 }
-.toggleNavbar {
-  width: 250px;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 70px;
-  z-index: 1;
-  background-color: gray;
+@media (min-width: 320px) and (max-width: 1023px) {
+  #toggleNavbar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    z-index: 1;
+    background-color: gray;
+    transition: width 2s, height 2s, background-color 2s, rotate 2s, 300ms, ease-in-out;
+  }
 }
 @property --tw-translate-x {
   syntax: "*";

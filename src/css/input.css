@@ -1,11 +1,26 @@
 @import "tailwindcss";
 
-.toggleNavbar {
-  width: 250px;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 70px;
-  z-index: 1;
-  background-color: gray;
+/* media query for sidebar  */
+@media (min-width: 320px) and (max-width: 1023px) {
+  #toggleNavbar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    z-index: 1;
+    background-color: gray;
+    transition: width 2s, height 2s, background-color 2s, rotate 2s, 300ms,
+      ease-in-out;
+    /* transition: 300ms ease-in-out; */
+  }
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-slide {
+    width: 25%;
 }
