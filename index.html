@@ -21,13 +21,14 @@
                 <!-- container section start  -->
                 <!-- <div class="container mx-auto"> -->
                 <!-- header start here -->
-                <div class="w-full h-20 px-2.5 flex flex-col sm:flex-row items-center justify-between">
+                <div
+                    class="fixed lg:sticky top-0 z-50 w-full py-5 px-3 flex flex-col sm:flex-row items-center justify-between bg-neutral-800 lg:bg-none lg:bg-transparent">
 
-                    <!-- hamburger + logo -->
-                    <div class="flex items-center justify-between gap-3 md:gap-10">
+                    <!-- hamburger, cross + logo -->
+                    <div class="w-full sm:w-auto flex items-center justify-between z-50 gap-3 md:gap-10 relative">
                         <!-- hamburger menu starts here  -->
                         <div id="hamburger" class="lg:hidden">
-                            <svg class="hamburgerIcon w-4 md:w-6" xmlns="http://www.w3.org/2000/svg"
+                            <svg class="w-4 md:w-6" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
                                     d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
@@ -36,25 +37,16 @@
                         </div>
                         <!-- hamburger menu ends here -->
 
-                        <!-- Sidebar -->
-
-                        <!-- <aside id="sidebar"
-                            class="fixed top-0 left-0 h-screen w-72 p-6 z-40 lg:hidden transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out bg-gray-900 text-white">
-                            <div class="flex justify-between items-center mb-6">
-                                <h2 class="text-2xl font-bold">Sidebar</h2>
-                                <button id="closeBtn" class="text-2xl text-white">&times;</button>
-                            </div>
-                            <nav>
-                                <ul class="space-y-10">
-                                    <li><a href="#" class="hover:text-amber-400">Home</a></li>
-                                    <li><a href="#" class="hover:text-amber-400">Listings</a></li>
-                                    <li><a href="#" class="hover:text-amber-400">Members</a></li>
-                                    <li><a href="#" class="hover:text-amber-400">Blog</a></li>
-                                    <li><a href="#" class="hover:text-amber-400">Pages</a></li>
-                                    <li><a href="#" class="hover:text-amber-400">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </aside> -->
+                        <!-- cross icon starts here  -->
+                        <div id="cross" class="hidden absolute left-0">
+                            <svg class="w-7 md:w-9 transition-transform duration-300 ease-in-out rotate-0"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                    clip-rule="evenodd" fill="white" />
+                            </svg>
+                        </div>
+                        <!-- cross icon ends here -->
 
                         <!-- logo start here  -->
                         <div class="logo">
@@ -111,31 +103,31 @@
                     <!-- nav items start here  -->
                     <!-- <div class="hidden md:visible md:flex w-full justify-between flex-wrap items-center"> -->
                     <!-- nav items start | add toggleNavbar class to the div  -->
-                    <div id="toggleNavbar" class="hidden lg:block">
-                        <ul class="flex flex-col lg:flex-row gap-5 xl:gap-10 items-center list-none">
+                    <div id="sideNavbar" class="hidden lg:block">
+                        <ul
+                            class="flex flex-col lg:flex-row gap-5 px-5 pt-20 lg:px-0 lg:py-0 lg:items-center xl:gap-10 list-none">
                             <!-- home li start -->
                             <li class="relative group">
-                                <a href="/"
-                                    class="flex gap-2 items-center text-base font-semibold text-white"><span>Home</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 6"
-                                        fill="none">
-                                        <path
-                                            d="M3.67412 5.20744L0.253008 1.78633C0.170924 1.70424 0.129883 1.60457 0.129883 1.48731C0.129883 1.37005 0.170924 1.27037 0.253008 1.18829L0.657561 0.792531C0.739645 0.710447 0.837852 0.669405 0.952182 0.669405C1.06651 0.669405 1.16765 0.710447 1.2556 0.792531L3.97314 3.50128L6.69069 0.792531C6.77863 0.710447 6.87977 0.669405 6.9941 0.669405C7.10843 0.669405 7.20664 0.710447 7.28872 0.792531L7.69328 1.18829C7.77536 1.27037 7.8164 1.37005 7.8164 1.48731C7.8164 1.60457 7.77536 1.70424 7.69328 1.78633L4.27216 5.20744C4.19008 5.28952 4.0904 5.33057 3.97314 5.33057C3.85588 5.33057 3.75621 5.28952 3.67412 5.20744Z"
-                                            fill="white" />
-                                    </svg>
+                                <a href="/" class="flex gap-2 items-center text-base font-semibold text-white">Home
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                            viewBox="0 0 8 6" fill="none">
+                                            <path
+                                                d="M3.67412 5.20744L0.253008 1.78633C0.170924 1.70424 0.129883 1.60457 0.129883 1.48731C0.129883 1.37005 0.170924 1.27037 0.253008 1.18829L0.657561 0.792531C0.739645 0.710447 0.837852 0.669405 0.952182 0.669405C1.06651 0.669405 1.16765 0.710447 1.2556 0.792531L3.97314 3.50128L6.69069 0.792531C6.77863 0.710447 6.87977 0.669405 6.9941 0.669405C7.10843 0.669405 7.20664 0.710447 7.28872 0.792531L7.69328 1.18829C7.77536 1.27037 7.8164 1.37005 7.8164 1.48731C7.8164 1.60457 7.77536 1.70424 7.69328 1.78633L4.27216 5.20744C4.19008 5.28952 4.0904 5.33057 3.97314 5.33057C3.85588 5.33057 3.75621 5.28952 3.67412 5.20744Z"
+                                                fill="white" />
+                                        </svg></span>
                                 </a>
                                 <div
                                     class="hidden absolute left-0 right-0 w-max px-5 py-2.5 z-1 -translate-x-4 rounded-xl bg-white shadow-[0px_8px_16px_rgba(0,0,0,0.4)] group-hover:block">
                                     <!-- <div class="dropdownColumn"> -->
                                     <ul class="group flex-col list-none">
-                                        <li class=" py-2.5"><a class="font-bold text-black hover:text-amber-400"
+                                        <li class=" py-2.5"><a class="font-bold hover:text-amber-400"
                                                 href="/home2.html">Home
                                                 2</a></li>
                                         <li class="dropdownItems py-2.5"><a class="font-bold hover:text-amber-400"
                                                 href="/home3.html">Home 3</a>
                                         </li>
                                         <li class="dropdownItems py-2.5"><a class="font-bold hover:text-amber-400"
-                                                href="/home4.html">Home 4</span>
+                                                href="/home4.html">Home 4</a>
                                         </li>
                                         <li class="dropdownItems py-2.5"><a class="font-bold hover:text-amber-400"
                                                 href="/home5.html">Home 5</a>
@@ -144,13 +136,10 @@
                                                 href="/home6.html">Home 6</a>
                                         </li>
                                         <li class="dropdownItems py-2.5"><a class="font-bold hover:text-amber-400"
-                                                href="/home6.html">Home 7</a>
+                                                href="/home7.html">Home 7</a>
                                         </li>
                                         <li class="dropdownItems py-2.5"><a class="font-bold hover:text-amber-400"
-                                                href="/home6.html">Home 8</a>
-                                        </li>
-                                        <li class="dropdownItems py-2.5"><a class="font-bold hover:text-amber-400"
-                                                href="/home6.html">Home 9</a>
+                                                href="/home8.html">Home 8</a>
                                         </li>
                                     </ul>
                                     <!-- </div> -->
@@ -158,87 +147,47 @@
                             </li>
                             <!-- home li end  -->
                             <!-- listings li start  -->
-                            <li class="relative group">
-                                <a class="flex gap-2 items-center font-semibold text-base text-white"
-                                    href="#"><span>Listings</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 6"
+                            <li class="relative group flex gap-2 items-center font-semibold text-base text-white">
+                                Listings
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 6"
                                         fill="none">
                                         <path
                                             d="M3.67412 5.20744L0.253008 1.78633C0.170924 1.70424 0.129883 1.60457 0.129883 1.48731C0.129883 1.37005 0.170924 1.27037 0.253008 1.18829L0.657561 0.792531C0.739645 0.710447 0.837852 0.669405 0.952182 0.669405C1.06651 0.669405 1.16765 0.710447 1.2556 0.792531L3.97314 3.50128L6.69069 0.792531C6.77863 0.710447 6.87977 0.669405 6.9941 0.669405C7.10843 0.669405 7.20664 0.710447 7.28872 0.792531L7.69328 1.18829C7.77536 1.27037 7.8164 1.37005 7.8164 1.48731C7.8164 1.60457 7.77536 1.70424 7.69328 1.78633L4.27216 5.20744C4.19008 5.28952 4.0904 5.33057 3.97314 5.33057C3.85588 5.33057 3.75621 5.28952 3.67412 5.20744Z"
                                             fill="white" />
-                                    </svg></a>
-                                <div class="hidden absolute left-0 right-0 w-max px-5 py-2 z-1
-                                                   -translate-x-4 rounded-xl
-                                                    shadow-[0px_8px_16px_rgba(0,0,0,0.4)] group-hover:block bg-white">
-                                    <ul class="group flex-col list-none">
-                                        <li class="py-2.5"><a class="font-bold hover:text-amber-400"
-                                                href="/home4.html">Home 4</a></li>
-                                        <li class="py-2.5"><a class="font-bold hover:text-amber-400"
-                                                href="/home5.html">Home 5</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    </svg></span>
                             </li>
                             <!-- listings li end  -->
                             <!-- members li start  -->
-                            <li class="relative group">
-                                <a class="flex gap-2 items-center font-semibold text-base text-white"
-                                    href="#"><span>Members</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 6"
+                            <li class="relative group flex gap-2 items-center font-semibold text-base text-white">
+                                Members
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 6"
                                         fill="none">
                                         <path
                                             d="M3.67412 5.20744L0.253008 1.78633C0.170924 1.70424 0.129883 1.60457 0.129883 1.48731C0.129883 1.37005 0.170924 1.27037 0.253008 1.18829L0.657561 0.792531C0.739645 0.710447 0.837852 0.669405 0.952182 0.669405C1.06651 0.669405 1.16765 0.710447 1.2556 0.792531L3.97314 3.50128L6.69069 0.792531C6.77863 0.710447 6.87977 0.669405 6.9941 0.669405C7.10843 0.669405 7.20664 0.710447 7.28872 0.792531L7.69328 1.18829C7.77536 1.27037 7.8164 1.37005 7.8164 1.48731C7.8164 1.60457 7.77536 1.70424 7.69328 1.78633L4.27216 5.20744C4.19008 5.28952 4.0904 5.33057 3.97314 5.33057C3.85588 5.33057 3.75621 5.28952 3.67412 5.20744Z"
                                             fill="white" />
-                                    </svg></a>
-                                <div
-                                    class="hidden absolute left-0 right-0 w-max px-5 py-2 z-1 text-center -translate-x-1 rounded-xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)] group-hover:block bg-white">
-                                    <ul class="group flex-col list-none">
-                                        <li class="py-2.5"><a class="font-bold hover:text-amber-400"
-                                                href="/home6.html">Home 6</a>
-                                        </li>
-                                        <li class="py-2.5"><a class="font-bold hover:text-amber-400"
-                                                href="/home7.html">Home 7</a></li>
-                                    </ul>
-                                </div>
+                                    </svg></span>
                             </li>
                             <!-- members li end  -->
                             <!-- blog li start  -->
-                            <li class="relative group">
-                                <a class="flex gap-2 items-center font-semibold text-base text-white hover:text-white"
-                                    href="#"><span>Blog</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 6"
+                            <li class="relative group flex gap-2 items-center font-semibold text-base text-white">
+                                Blog
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 6"
                                         fill="none">
                                         <path
                                             d="M3.67412 5.20744L0.253008 1.78633C0.170924 1.70424 0.129883 1.60457 0.129883 1.48731C0.129883 1.37005 0.170924 1.27037 0.253008 1.18829L0.657561 0.792531C0.739645 0.710447 0.837852 0.669405 0.952182 0.669405C1.06651 0.669405 1.16765 0.710447 1.2556 0.792531L3.97314 3.50128L6.69069 0.792531C6.77863 0.710447 6.87977 0.669405 6.9941 0.669405C7.10843 0.669405 7.20664 0.710447 7.28872 0.792531L7.69328 1.18829C7.77536 1.27037 7.8164 1.37005 7.8164 1.48731C7.8164 1.60457 7.77536 1.70424 7.69328 1.78633L4.27216 5.20744C4.19008 5.28952 4.0904 5.33057 3.97314 5.33057C3.85588 5.33057 3.75621 5.28952 3.67412 5.20744Z"
                                             fill="white" />
-                                    </svg></a>
-                                <div
-                                    class="hidden absolute left-0 right-0 w-max px-3 py-2 z-1 -translate-x-4 rounded-xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)] group-hover:block bg-white">
-                                    <ul class="group flex-col list-none">
-                                        <li class="py-2.5"><a class="font-bold hover:text-amber-400"
-                                                href="/home8.html">Home 8</a></li>
-                                    </ul>
-                                </div>
+                                    </svg></span>
                             </li>
                             <!-- blog li end  -->
                             <!-- pages li start  -->
-                            <li class="relative group">
-                                <a class="flex gap-2 items-center font-semibold text-base text-white"
-                                    href="#"><span>Pages</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 6"
+                            <li class="relative group flex gap-2 items-center font-semibold text-base text-white">
+                                Pages
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 8 6"
                                         fill="none">
                                         <path
                                             d="M3.67412 5.20744L0.253008 1.78633C0.170924 1.70424 0.129883 1.60457 0.129883 1.48731C0.129883 1.37005 0.170924 1.27037 0.253008 1.18829L0.657561 0.792531C0.739645 0.710447 0.837852 0.669405 0.952182 0.669405C1.06651 0.669405 1.16765 0.710447 1.2556 0.792531L3.97314 3.50128L6.69069 0.792531C6.77863 0.710447 6.87977 0.669405 6.9941 0.669405C7.10843 0.669405 7.20664 0.710447 7.28872 0.792531L7.69328 1.18829C7.77536 1.27037 7.8164 1.37005 7.8164 1.48731C7.8164 1.60457 7.77536 1.70424 7.69328 1.78633L4.27216 5.20744C4.19008 5.28952 4.0904 5.33057 3.97314 5.33057C3.85588 5.33057 3.75621 5.28952 3.67412 5.20744Z"
                                             fill="white" />
-                                    </svg>
-                                </a>
-                                <div
-                                    class="hidden absolute left-0 right-0 w-max px-5 py-2.5 z-1 -translate-x-4 rounded-xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)] group-hover:block bg-white">
-                                    <ul class="group flex-col list-none">
-                                        <li class="py-2.5"><a class="font-bold hover:text-amber-400"
-                                                href="/home9.html">Home 9</a></li>
-                                    </ul>
-                                </div>
+                                    </svg></span>
                             </li>
                             <!-- pages li end  -->
                             <li><a class="font-semibold text-white" href="/contact.html">Contact</a>
@@ -250,11 +199,11 @@
                     <!-- nav items end here  -->
 
                     <!-- header right section start  -->
-                    <div class="flex items-center gap-1 sm:gap-2">
+                    <div class="flex items-center gap-5 sm:gap-2 mt-2 md:mt-0">
                         <!-- phone number section start  -->
-                        <div class="flex sm:gap-1 items-center text-white text-xs sm:text-sm md:text-base">
+                        <div class="flex gap-1 sm:gap-2 items-center text-white text-xs sm:text-sm md:text-base">
                             <span>
-                                <svg class="w-4 h-7 sm:w-5" xmlns="http://www.w3.org/2000/svg" width="21" height="18"
+                                <svg class="w-5 h-7 sm:w-5" xmlns="http://www.w3.org/2000/svg" width="21" height="18"
                                     viewBox="0 0 21 21" fill="none">
                                     <path
                                         d="M15.35 20.75C13.5277 20.75 11.75 20.4167 10.0166 19.75C8.1944 19.0389 6.58328 17.9722 5.18328 16.55C3.78328 15.1278 2.70551 13.5056 1.94995 11.6833C1.28328 9.95 0.949951 8.17222 0.949951 6.35C0.949951 5.32778 1.20551 4.39444 1.71662 3.55C2.22773 2.70555 2.90551 2.02778 3.74995 1.51667C4.5944 1.00555 5.52773 0.749998 6.54995 0.749998C6.81662 0.749998 6.9944 0.883333 7.08328 1.15L9.61662 7.41667C9.66106 7.55 9.64995 7.69444 9.58329 7.85C9.51662 8.00556 9.41662 8.10555 9.28329 8.15L6.54995 9.28333C6.5944 10.3056 6.88329 11.2611 7.41662 12.15C7.94995 13.0389 8.66106 13.75 9.54995 14.2833C10.4388 14.8167 11.3944 15.1056 12.4166 15.15L13.55 12.4167C13.5944 12.2833 13.6944 12.1833 13.85 12.1167C14.0055 12.05 14.15 12.0389 14.2833 12.0833L20.55 14.6167C20.8166 14.7056 20.95 14.8833 20.95 15.15C20.95 16.1722 20.6944 17.1056 20.1833 17.95C19.6722 18.7944 18.9944 19.4722 18.15 19.9833C17.3055 20.4944 16.3722 20.75 15.35 20.75ZM6.14995 1.95C5.03884 2.03889 4.0944 2.50555 3.31662 3.35C2.53884 4.19444 2.14995 5.19444 2.14995 6.35C2.14995 8.12778 2.48328 9.81667 3.14995 11.4167C3.81662 13.0167 4.77217 14.4389 6.01662 15.6833C7.26106 16.9278 8.68328 17.8833 10.2833 18.55C11.8833 19.2167 13.5722 19.55 15.35 19.55C16.5055 19.55 17.5055 19.1611 18.35 18.3833C19.1944 17.6056 19.6611 16.6611 19.75 15.55L14.4166 13.4167L13.35 16.0167C13.2611 16.2389 13.0833 16.35 12.8166 16.35C11.4833 16.35 10.2388 16.0167 9.08329 15.35C7.92773 14.6833 7.01662 13.7722 6.34995 12.6167C5.68328 11.4611 5.34995 10.2167 5.34995 8.88333C5.34995 8.61667 5.46106 8.43889 5.68328 8.35L8.28328 7.28333L6.14995 1.95Z"
@@ -267,7 +216,7 @@
 
                         <!-- account icon start  -->
                         <div class="cursor-pointer">
-                            <svg class="w-6 sm:w-10" xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                            <svg class="w-8 sm:w-10" xmlns="http://www.w3.org/2000/svg" width="36" height="36"
                                 viewBox="0 0 41 41" fill="none">
                                 <rect x="1.28003" y="1.25" width="39" height="39" rx="19.5" stroke="white" />
                                 <g clip-path="url(#clip0_2_464)">
@@ -287,7 +236,7 @@
 
                         <!-- add property button start  -->
                         <button
-                            class="px-1 sm:px-3 py-1 text-xs sm:text-sm md:text-base lg:text-lg transition-all border rounded-4xl border-white text-white hover:bg-black hover:text-white">
+                            class="px-2 sm:px-3 py-1 text-xs sm:text-sm md:text-base lg:text-lg transition-all border rounded-4xl border-white text-white hover:bg-black hover:text-white">
                             Add Property
                         </button>
                         <!-- add property button end  -->
@@ -308,7 +257,7 @@
         <!-- container start -->
         <div class="container mx-auto">
             <!-- let us guide your home start  -->
-            <div class="text-center sm:mt-2 md:mt-24 lg:mt-40 py-5 md:py-0">
+            <div class="text-center pt-40 py-14 md:pt-44">
                 <button
                     class="px-3 py-1 text-sm md:text-base lg:text-lg border rounded-4xl border-white text-white hover:bg-black hover:text-white">
                     LET US GUIDE YOUR HOME
@@ -321,13 +270,13 @@
                     love to
                     live
                 </h1>
-                <div class="max-w-2xl mx-auto mt-10 sm:w-96 lg:w-full">
+                <div class="max-w-2xl mx-auto mt-10 sm:w-96 w-2/3 lg:w-full">
                     <div class="relative">
                         <input
                             class="w-full pl-6 pr-14 py-3 transition duration-300 ease focus:outline-none rounded-4xl hover:border-slate-300 shadow-sm focus:shadow bg-white placeholder:text-black text-slate-700 text-sm border border-slate-200 focus:border-slate-400"
                             placeholder="Enter Name, Keywords..." />
                         <button
-                            class="absolute top-1 right-1 py-2.5 px-2.5 text-sm flex items-center rounded-full bg-amber-200 text-white hover:bg-neutral-300"
+                            class="absolute top-1 right-1 py-2.5 px-2.5 text-sm flex items-center rounded-full cursor-pointer bg-amber-200 text-white hover:bg-neutral-300"
                             type="button">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" class="w-4 h-4">
                                 <path fill-rule="evenodd"
@@ -346,14 +295,14 @@
     <!-- header and hero section end  -->
 
     <!-- Slider main container -->
-    <div class="swiper">
+    <div class="swiper bg-gray-100 mx-2 mt-8 md:mt-14 xl:mt-20 rounded-3xl py-5 md:py-14 xl:py-20">
         <div class="container mx-auto">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
                     <!-- homes for you box 1 start  -->
-                    <div class="w-96 h-80 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
+                    <div class="w-96 h-full mb-5 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
                         <!-- box image start  -->
                         <div class="relative">
                             <img class="rounded-tl-2xl rounded-tr-2xl object-cover"
@@ -435,7 +384,7 @@
 
                 <div class="swiper-slide">
                     <!-- homes for you box 1 start  -->
-                    <div class="w-96 h-96 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
+                    <div class="w-96 h-full mb-5 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
                         <!-- box image start  -->
                         <div class="relative">
                             <img class="rounded-tl-2xl rounded-tr-2xl object-cover"
@@ -517,7 +466,7 @@
 
                 <div class="swiper-slide">
                     <!-- homes for you box 1 start  -->
-                    <div class="w-96 h-96 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
+                    <div class="w-96 h-full mb-5 bg-white rounded-2xl shadow-[0px_8px_16px_rgba(0,0,0,0.4)]">
                         <!-- box image start  -->
                         <div class="relative">
                             <img class="rounded-tl-2xl rounded-tr-2xl object-cover"
@@ -596,8 +545,8 @@
                     </div>
                     <!-- homes for you box 1 end  -->
                 </div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
+                <!-- <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div> -->
                 ...
             </div>
             <!-- If we need pagination -->
@@ -1069,7 +1018,7 @@
                 adipiscing elit.</p>
 
             <!-- properties gallery section start -->
-            <div class="flex-col flex md:flex-row gap-2 mt-7 lg:mt-14">
+            <div class="flex-col flex md:flex-row gap-5 mt-7 lg:mt-14">
                 <!-- left container start -->
                 <div class="md:w-full lg:w-1/2">
                     <div
@@ -1102,7 +1051,7 @@
                         <!-- next button end  -->
                     </div>
                     <!-- left bottom boxes start  -->
-                    <div class="flex-col flex sm:flex-row gap-2 mt-5">
+                    <div class="flex-col flex sm:flex-row gap-5 mt-5">
                         <!-- bottom box 1 start -->
                         <div class="w-full lg:w-1/2 p-4 lg:p-6 rounded-2xl bg-black text-white">
                             <p class="font-medium text-2xl md:text-3xl lg:text-4xl">280+</p>
@@ -1242,7 +1191,7 @@
             <div class="flex flex-col md:flex-row gap-2 sm:gap-3 lg:gap-0 w-full justify-between items-center">
                 <!-- left container start -->
                 <div class="w-full md:w-1/2 rounded-2xl relative flex justify-center">
-                    <img class="h-96 md:h-full" src="./public/assets/images/expertiseImg.png"
+                    <img class="h-72 md:h-full" src="./public/assets/images/expertiseImg.png"
                         alt="Local Expertise Image">
                     <div class="absolute left-14 sm:left-40 top-6 md:left-6">
                         <img class="w-40 lg:w-full" src="./public/assets/images/expertiseImg2.png"
@@ -1687,7 +1636,7 @@
     <!-- footer section start -->
     <footer class="w-full bg-black py-10 mt-8 sm:mt-12 lg:mt-16 xl:mt-20 relative">
         <!-- container start -->
-        <div class="max-w-screen-2xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="container mx-auto">
             <div class="px-6">
                 <!-- footer top start -->
                 <div
@@ -1861,7 +1810,7 @@
                 <div
                     class="border-t border-gray-700 mt-10 pt-7 flex flex-col md:flex-row justify-center items-center text-white text-sm">
                     <p>Copyright © 2024, JustHome</p>
-                    <div id="scroll-to-top" class="absolute right-6 cursor-pointer hover:scale-110">
+                    <div id="scroll-to-top" class="fixed bottom-6 right-6 z-50 cursor-pointer hover:scale-110">
                         <svg id="scroll-arrow" xmlns="http://www.w3.org/2000/svg" width="50" height="51"
                             viewBox="0 0 50 51" fill="none">
                             <rect y="0.0898438" width="50" height="50" rx="25" fill="#222121" />
