@@ -16,22 +16,22 @@ cross.addEventListener("click", () => {
 });
 
 // scroll to the top
-const scrollToTop = document.getElementById("arrowScroll");
+// const scrollToTop = document.getElementById("arrowScroll");
 
-window.onscroll = () => {
-  if (window.scrollY > 500) {
-    arrowScroll.style.opacity = "1";
-  } else {
-    arrowScroll.style.opacity = "0";
-  }
-};
+// window.onscroll = () => {
+//   if (window.scrollY > 500) {
+//     arrowScroll.style.opacity = "1";
+//   } else {
+//     arrowScroll.style.opacity = "0";
+//   }
+// };
 
-scrollToTop.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
+// scrollToTop.addEventListener("click", function () {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: "smooth",
+//   });
+// });
 
 // swiper js library
 const swiper = new Swiper(".swiper", {
