@@ -16,7 +16,7 @@
     <!-- header and hero section start  -->
     <div class="w-full lg:h-screen bg-[url('../../public/assets/images/home3HeroBgImg.jpeg')] bg-cover bg-no-repeat">
         <header>
-            <nav class="w-full p-3 flex items-center justify-between shadow-2xl">
+            <nav class="w-full p-5 flex items-center justify-between shadow-2xl">
 
                 <div class="w-full sm:w-auto flex justify-between items-center">
                     <!-- hamburger -->
@@ -201,20 +201,84 @@
         <!-- container start -->
         <div class="container mx-auto">
             <!-- let us guide your home start  -->
-            <div class="text-center mt-44">
-                <!-- let us guide your home end  -->
-                <h1 class=" font-medium text-center mt-10 sm:mt-5 text-2xl lg:text:4xl xl:text-6xl">
+            <div class="text-center p-5 lg:p-0 lg:mt-40">
+                <h1 class="mt-5 text-center text-2xl lg:text-5xl font-semibold">
                     The <span class="text-blue-800">#1</span> site real estate<br>
                     professionals trust*
                 </h1>
                 <p class="mt-10">From as low as $10 per day with limited time offer discounts.</p>
-            </div>
-            <!-- let us guide your home end  -->
-        </div>
-        <!-- container end -->
 
+                <!-- fields  -->
+                <div
+                    class="max-w-4xl mx-auto mt-14 p-3 flex flex-col md:flex-row items-center justify-center bg-gray-100 rounded-full shadow-2xl">
+                    <div class="lg:w-1/4 flex items-center justify-between p-3 border border-neutral-300 rounded-full">
+                        <span class="text-gray-700">Type</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+
+                    <!-- Input field -->
+                    <input
+                        class="lg:w-1/2 mx-2 p-4 rounded-full outline-none text-sm bg-white placeholder-black border border-neutral-300"
+                        placeholder="Enter Keywords..." />
+
+                    <div class="flex mt-2 md:mt-0">
+                        <button class="px-5 py-3 bg-gray-200 rounded-full font-medium cursor-pointer">Filters</button>
+                        <button
+                            class="px-5 py-3 ml-2 bg-blue-500 text-white rounded-full font-medium cursor-pointer">Search</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-    <!-- header and hero section end  -->
+
+    <div class="container mx-auto">
+        <div class="w-full py-8 lg:py-16 mt-10 lg:mt-28">
+            <h2 class="text-center text-xl lg:text-4xl font-bold">Find Properties in These Cities
+            </h2>
+            <p class="mt-3 text-center">Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+            </p>
+            <!-- find properties in these cities cards start -->
+            <div class="w-full mt-8 flex flex-wrap gap-5 justify-center text-white">
+                <!-- town house card start -->
+                <div
+                    class="w-68 h-72 lg:h-96 p-5 rounded-2xl bg-[url('../../public/assets/images/findPropertyRightImg1.jpg')] backdrop-opacity-85 bg-zinc-600 bg-blend-soft-light">
+                    <p class="text-base lg:text-xl font-medium">Town House</p>
+                    <span class="text-sm">2 Properties</span>
+                </div>
+                <!-- town house card end -->
+
+                <!-- los angeles card start -->
+                <div
+                    class="w-68 h-72 lg:h-96 p-5 rounded-2xl bg-[url('../../public/assets/images/findPropertyRightImg2.jpg')] backdrop-opacity-85 bg-zinc-600 bg-blend-soft-light">
+                    <p class="text-base lg:text-xl font-medium">Los Angeles</p>
+                    <span class="text-sm">1 Property</span>
+                </div>
+                <!-- los angeles card end -->
+
+                <!-- miami card start -->
+                <div
+                    class="w-68 h-72 lg:h-96 p-5 rounded-2xl bg-[url('../../public/assets/images/findPropertyRightImg3.jpg')] backdrop-opacity-85 bg-zinc-600 bg-blend-soft-light">
+                    <p class="text-base lg:text-xl font-medium">Miami</p>
+                    <span class="text-sm">2 Properties</span>
+                </div>
+                <!-- miami card end -->
+
+                <!-- florida card start -->
+                <div
+                    class="w-68 h-72 lg:h-96 p-5 rounded-2xl bg-[url('../../public/assets/images/findPropertyLeftImg3.jpg')] backdrop-opacity-85 bg-zinc-600 bg-blend-soft-light">
+                    <p class="text-base lg:text-xl font-medium">Florida</p>
+                    <span class="text-sm">3 Properties</span>
+                </div>
+                <!-- florida card end -->
+            </div>
+            <!-- find properties in these cities cards end -->
+        </div>
+    </div>
 
     <script src="../src/js/main.js"></script>
     <!-- Font Awesome CDN for icons -->
