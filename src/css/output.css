@@ -750,6 +750,9 @@
   .border-neutral-300 {
     border-color: var(--color-neutral-300);
   }
+  .border-neutral-400 {
+    border-color: var(--color-neutral-400);
+  }
   .border-neutral-700 {
     border-color: var(--color-neutral-700);
   }
@@ -918,6 +921,9 @@
   .bg-\[url\(\'\.\.\/\.\.\/public\/assets\/images\/home3HeroBgImg\.jpeg\'\)\] {
     background-image: url('../../public/assets/images/home3HeroBgImg.jpeg');
   }
+  .bg-\[url\(\'\.\.\/\.\.\/public\/assets\/images\/home4HeroBgImg\.jpeg\'\)\] {
+    background-image: url('../../public/assets/images/home4HeroBgImg.jpeg');
+  }
   .bg-\[url\(\'\.\.\/\.\.\/public\/assets\/images\/modernVillaImg\.jpeg\'\)\] {
     background-image: url('../../public/assets/images/modernVillaImg.jpeg');
   }
@@ -983,6 +989,9 @@
   }
   .px-3\.5 {
     padding-inline: calc(var(--spacing) * 3.5);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
@@ -1760,6 +1769,11 @@
   .lg\:mt-28 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 28);
+    }
+  }
+  .lg\:mt-32 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 32);
     }
   }
   .lg\:mt-36 {
