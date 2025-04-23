@@ -94,20 +94,22 @@
                     <!-- ul items -->
                     <ul class="flex-col lg:flex lg:flex-row">
                         <!-- home li start -->
-                        <li class="p-3 relative group">
-                            <a href="/" class="flex items-center justify-between font-semibold">
+                        <li class="p-3 relative">
+                            <button id="homeDropdownBtn"
+                                class="homeDropdownBtn flex items-center justify-between text-base font-semibold">
                                 <span class="pr-2">Home</span>
-                                <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
-                                    viewBox="0 0 8 6" fill="none">
+                                <svg class="homeArrow mt-1" id="homeArrow" xmlns="http://www.w3.org/2000/svg" width="10"
+                                    height="10" viewBox="0 0 8 6" fill="none" class="transition-transform duration-300">
                                     <path
                                         d="M3.67412 5.20744L0.253008 1.78633C0.170924 1.70424 0.129883 1.60457 0.129883 1.48731C0.129883 1.37005 0.170924 1.27037 0.253008 1.18829L0.657561 0.792531C0.739645 0.710447 0.837852 0.669405 0.952182 0.669405C1.06651 0.669405 1.16765 0.710447 1.2556 0.792531L3.97314 3.50128L6.69069 0.792531C6.77863 0.710447 6.87977 0.669405 6.9941 0.669405C7.10843 0.669405 7.20664 0.710447 7.28872 0.792531L7.69328 1.18829C7.77536 1.27037 7.8164 1.37005 7.8164 1.48731C7.8164 1.60457 7.77536 1.70424 7.69328 1.78633L4.27216 5.20744C4.19008 5.28952 4.0904 5.33057 3.97314 5.33057C3.85588 5.33057 3.75621 5.28952 3.67412 5.20744Z"
                                         fill="black" />
                                 </svg>
-                            </a>
-                            <!-- dropdown  -->
-                            <div
-                                class="hidden absolute left-0 right-0 w-max p-3 z-1  rounded-xl bg-neutral-200 shadow-2xl group-hover:block">
-                                <ul class="group flex-col list-none">
+                            </button>
+                            <div id="homeDropdown"
+                                class="hidden absolute left-24 top-2 lg:top-10 lg:left-0 lg:right-0 w-max px-3 z-50 rounded-xl bg-white shadow-2xl group-hover:block">
+                                <ul class="flex-col list-none text-black">
+                                    <li class="py-3"><a class="menu-item font-bold hover:text-amber-400" href="/">Home
+                                            1</a></li>
                                     <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home2.html">Home
                                             2</a></li>
                                     <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home3.html">Home
@@ -121,15 +123,6 @@
                                     </li>
                                     <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home6.html">Home
                                             6</a>
-                                    </li>
-                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home7.html">Home
-                                            7</a>
-                                    </li>
-                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home8.html">Home
-                                            8</a>
-                                    </li>
-                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home9.html">Home
-                                            9</a>
                                     </li>
                                 </ul>
                             </div>
@@ -329,7 +322,7 @@
     <div class="container mx-auto">
         <!-- why you should work with us section start  -->
         <div class="w-full mt-10 lg:mt-28 ">
-            <h2 class="text-center text-xl lg:text-4xl font-bold">Why You Should Work With Us
+            <h2 class="text-center text-xl lg:text-4xl font-semibold">Why You Should Work With Us
             </h2>
             <p class="mt-3 text-center">Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit.</p>
@@ -394,7 +387,7 @@
 
         <!-- featured properties section start  -->
         <div class="w-full mt-10 lg:mt-28">
-            <h2 class="text-center text-xl lg:text-4xl font-bold">Featured Properties
+            <h2 class="text-center text-xl lg:text-4xl font-aemibold">Featured Properties
             </h2>
             <p class="mt-3 text-center">Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit.
@@ -911,7 +904,7 @@
 
     <!-- find properties in these cities background section start  -->
     <div class="w-full py-8 lg:py-16 mt-10 lg:mt-28 bg-gray-50">
-        <h2 class="text-center text-xl lg:text-4xl font-bold">Find Properties in These Cities
+        <h2 class="text-center text-xl lg:text-4xl font-semibold">Find Properties in These Cities
         </h2>
         <p class="mt-3 text-center">Lorem ipsum dolor sit amet, consectetur
             adipiscing elit.
@@ -985,7 +978,7 @@
 
             <!-- right container start -->
             <div class="w-full lg:w-1/3">
-                <h2 class="text-lg lg:text-4xl text-center lg:text-start font-bold">How It
+                <h2 class="text-lg lg:text-4xl text-center lg:text-start font-semibold">How It
                     Works?
                     <br>Find a
                     Perfect Home
@@ -1213,7 +1206,7 @@
         <div class="container mx-auto">
             <!-- best properties container start -->
             <div class="w-full text-white">
-                <h2 class="text-lg lg:text-4xl text-center font-bold">Best
+                <h2 class="text-lg lg:text-4xl text-center font-semibold">Best
                     Properties</h2>
                 <p class="mt-5 text-center">Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit.</p>
@@ -1382,7 +1375,7 @@
     <div class="container mx-auto">
         <!-- team of experts container start -->
         <div class="w-full mt-10 lg:mt-28">
-            <h2 class="text-lg lg:text-4xl text-center font-bold">Meet Our Team Of Experts
+            <h2 class="text-lg lg:text-4xl text-center font-semibold">Meet Our Team Of Experts
             </h2>
             <p class="mt-5 text-center">Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit.
@@ -1443,7 +1436,7 @@
 
         <!-- real estate markets container start  -->
         <div class="w-full mt-10 lg:mt-28">
-            <h2 class="text-lg lg:text-4xl text-center font-bold">Popular Real Estate Markets
+            <h2 class="text-lg lg:text-4xl text-center font-semibold">Popular Real Estate Markets
             </h2>
             <p class="mt-5 text-center">Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit.
@@ -1494,13 +1487,13 @@
     <!-- container end -->
 
     <!-- footer section start -->
-    <footer class="w-full py-10 mt-20 relative bg-black">
+    <footer class="w-full py-10 mt-8 lg:mt-16 relative bg-neutral-700">
         <!-- container start -->
         <div class="container mx-auto">
             <div class="px-6">
                 <!-- footer top start -->
                 <div
-                    class="flex flex-col sm:flex-row sm:justify-between items-center py-5 text-white border-b border-gray-700">
+                    class="flex flex-col sm:flex-row sm:justify-between items-center py-5 text-white border-b border-gray-500">
                     <!-- logo start  -->
                     <div class="mb-4">
                         <a href="/">
@@ -1581,14 +1574,14 @@
 
                     <!-- Logo and Subscribe -->
                     <div class="lg:w-1/5">
-                        <p class="text-white font-medium">Subscribe</p>
+                        <p class="text-gray-400 font-medium">Subscribe</p>
                         <form
                             class="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-2 relative">
                             <input
-                                class="w-full text-sm border-b pr-24 py-5 outline-none placeholder:text-white text-white"
+                                class="w-full placeholder:text-white text-white text-sm border-b pr-24 py-5 outline-none"
                                 placeholder="Your email">
                             <button
-                                class="absolute right-0 top-0 py-1.5 px-3.5 mt-3 text-base flex items-center gap-2 bg-neutral-800 rounded-4xl text-white cursor-pointer hover:bg-neutral-600">Send<span>
+                                class="absolute right-0 top-0 py-1.5 px-3.5 mt-3 text-base flex items-center gap-2 bg-neutral-600 rounded-4xl text-white cursor-pointer hover:bg-neutral-500">Send<span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 20"
                                         stroke-width="1.5" stroke="currentColor" class="size-5">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -1597,14 +1590,14 @@
                                 </span>
                             </button>
                         </form>
-                        <p class="mt-5 text-sm text-gray-400">Subscribe to our newsletter to receive our weekly feed.
+                        <p class="mt-5 text-sm text-white">Subscribe to our newsletter to receive our weekly feed.
                         </p>
                     </div>
 
                     <!-- Discover -->
                     <div>
-                        <h3 class="text-sm font-medium mb-3 text-white">Discover</h3>
-                        <ul class="space-y-1 text-gray-400 text-sm leading-6">
+                        <h3 class="text-sm font-medium mb-3 text-gray-400">Discover</h3>
+                        <ul class="space-y-1 text-white text-sm leading-6">
                             <li>Miami</li>
                             <li>New York</li>
                             <li>Chicago</li>
@@ -1616,8 +1609,8 @@
 
                     <!-- Quick Links -->
                     <div>
-                        <h3 class="text-sm font-medium mb-3 text-white">Quick Links</h3>
-                        <ul class="space-y-1 text-gray-400 text-sm leading-6">
+                        <h3 class="text-sm font-medium mb-3 text-gray-400">Quick Links</h3>
+                        <ul class="space-y-1 text-white text-sm leading-6">
                             <li>About</li>
                             <li>Contact</li>
                             <li>FAQ's</li>
@@ -1630,31 +1623,31 @@
 
                     <!-- Contact Us -->
                     <div>
-                        <h3 class="text-sm font-medium mb-3 text-white">Contact Us</h3>
-                        <p class="text-gray-400 text-sm">hi@justhome.com</p>
-                        <p class="text-gray-400 text-sm">(123) 456-7890</p>
+                        <h3 class="text-sm font-medium mb-3 text-gray-400">Contact Us</h3>
+                        <p class="text-white text-sm">hi@justhome.com</p>
+                        <p class="text-white text-sm">(123) 456-7890</p>
                     </div>
 
                     <!-- Address -->
                     <div>
-                        <h3 class="text-sm font-medium mb-3 text-white">Our Address</h3>
-                        <p class="text-gray-400 text-sm">99 Fifth Avenue, 3rd Floor</p>
-                        <p class="text-gray-400 text-sm mb-4">San Francisco, CA 1980</p>
+                        <h3 class="text-sm font-medium mb-3 text-gray-400">Our Address</h3>
+                        <p class="text-white text-sm">99 Fifth Avenue, 3rd Floor</p>
+                        <p class="text-white text-sm mb-4">San Francisco, CA 1980</p>
                     </div>
 
                     <!-- App -->
                     <div>
-                        <h3 class="text-sm font-medium mb-3 text-white">Get the app</h3>
+                        <h3 class="text-sm font-medium mb-3 text-gray-400">Get the app</h3>
 
                         <div class="space-y-3">
-                            <a href="#" class="flex items-center bg-[#181616] text-white px-3 py-4 rounded-xl">
+                            <a href="#" class="flex items-center bg-neutral-600 text-white px-3 py-4 rounded-xl">
                                 <img src="https://img.icons8.com/ios-filled/20/ffffff/mac-os.png" alt="" class="mr-2" />
                                 <p class="text-sm px-2 border-l border-neutral-700">Download on the<br><span
                                         class="font-medium">Apple
                                         Store</span>
                                 </p>
                             </a>
-                            <a href="#" class="flex items-center bg-[#181616] text-white px-3 py-4 rounded-xl">
+                            <a href="#" class="flex items-center bg-neutral-600 text-white px-3 py-4 rounded-xl">
                                 <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt=""
                                     class="mr-2" />
                                 <p class="text-sm px-2 border-l border-neutral-700">Get it on<br><span
@@ -1667,9 +1660,9 @@
 
                 <!-- footer bottom start -->
                 <div
-                    class="border-t border-gray-700 mt-10 pt-7 flex flex-col md:flex-row justify-center items-center text-white text-sm">
+                    class="border-t border-gray-500 mt-10 pt-7 flex flex-col md:flex-row justify-center items-center text-white text-sm">
                     <p>Copyright © 2024, JustHome</p>
-                    <div id="arrowScroll" class="fixed bottom-6 right-6 cursor-pointer opacity-0 hover:scale-110">
+                    <div id="arrowScroll" class="fixed bottom-6 right-6 z-50 opacity-0 cursor-pointer hover:scale-110">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51" fill="none">
                             <rect y="0.0898438" width="50" height="50" rx="25" fill="#222121" />
                             <g clip-path="url(#clip0_2_427)">

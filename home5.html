@@ -93,45 +93,37 @@
                     <!-- nav items -->
                     <ul class="flex-col lg:flex lg:flex-row">
                         <!-- home li start -->
-                        <li class="p-3 relative group">
-                            <a href="/" class="flex items-center justify-between text-base font-semibold">
+                        <li class="p-3 relative">
+                            <button class="homeDropdownBtn flex items-center justify-between text-base font-semibold">
                                 <span class="pr-2">Home</span>
-                                <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
-                                    viewBox="0 0 8 6" fill="none">
+                                <svg class="homeArrow mt-1" id="homeArrow" xmlns="http://www.w3.org/2000/svg" width="10"
+                                    height="10" viewBox="0 0 8 6" fill="none" class="transition-transform duration-300">
                                     <path
                                         d="M3.67412 5.20744L0.253008 1.78633C0.170924 1.70424 0.129883 1.60457 0.129883 1.48731C0.129883 1.37005 0.170924 1.27037 0.253008 1.18829L0.657561 0.792531C0.739645 0.710447 0.837852 0.669405 0.952182 0.669405C1.06651 0.669405 1.16765 0.710447 1.2556 0.792531L3.97314 3.50128L6.69069 0.792531C6.77863 0.710447 6.87977 0.669405 6.9941 0.669405C7.10843 0.669405 7.20664 0.710447 7.28872 0.792531L7.69328 1.18829C7.77536 1.27037 7.8164 1.37005 7.8164 1.48731C7.8164 1.60457 7.77536 1.70424 7.69328 1.78633L4.27216 5.20744C4.19008 5.28952 4.0904 5.33057 3.97314 5.33057C3.85588 5.33057 3.75621 5.28952 3.67412 5.20744Z"
                                         fill="black" />
                                 </svg>
-                            </a>
-                            <div
-                                class="hidden absolute left-0 right-0 w-max p-3 z-1  rounded-xl bg-neutral-200 shadow-2xl group-hover:block">
-                                <!-- <div class="dropdownColumn"> -->
-                                <ul class="group flex-col list-none">
-                                    <li class=" py-3"><a class="font-bold hover:text-amber-400" href="/home2.html">Home
+                            </button>
+
+                            <div id="homeDropdown"
+                                class="hidden absolute left-24 top-2 lg:top-10 lg:left-0 lg:right-0 w-max px-3 z-50 rounded-xl bg-white shadow-2xl group-hover:block">
+                                <ul class="flex-col list-none text-black">
+                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/">Home
+                                            1</a></li>
+                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home2.html">Home
                                             2</a></li>
-                                    <li class="dropdownItems py-3"><a class="font-bold hover:text-amber-400"
-                                            href="/home3.html">Home 3</a>
+                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home3.html">Home
+                                            3</a>
                                     </li>
-                                    <li class="dropdownItems py-3"><a class="font-bold hover:text-amber-400"
-                                            href="/home4.html">Home 4</a>
+                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home4.html">Home
+                                            4</a>
                                     </li>
-                                    <li class="dropdownItems py-3"><a class="font-bold hover:text-amber-400"
-                                            href="/home5.html">Home 5</a>
+                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home5.html">Home
+                                            5</a>
                                     </li>
                                     <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home6.html">Home
                                             6</a>
                                     </li>
-                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home7.html">Home
-                                            7</a>
-                                    </li>
-                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home8.html">Home
-                                            8</a>
-                                    </li>
-                                    <li class="py-3"><a class="font-bold hover:text-amber-400" href="/home9.html">Home
-                                            9</a>
-                                    </li>
                                 </ul>
-                                <!-- </div> -->
                             </div>
                         </li>
                         <li class="p-3">

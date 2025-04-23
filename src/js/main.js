@@ -16,29 +16,21 @@ cross.addEventListener("click", () => {
 });
 
 // li logic
-// const dropdownButtons = document.querySelectorAll(".homeDropdownBtn");
+const dropdownButton = document.querySelectorAll(".homeDropdownBtn");
+const arrow = document.querySelector(".homeArrow");
+const dropdown = document.getElementById("homeDropdown");
 
-// dropdownButtons.forEach((button) => {
-//   button.addEventListener("click", function (e) {
-//     e.preventDefault(e);
+const toggleDropdown = function () {
+  arrow.classList.toggle("rotate-180");
+  dropdown.classList.toggle("hidden");
+};
 
-//     const arrow = this.querySelector(".homeArrow");
-
-//     const dropdown = this.nextElementSibling;
-//     dropdown.classList.toggle("hidden");
-
-//     arrow.classList.toggle("rotate-180");
-//   });
-// });
-
-// document.addEventListener("click", function (event) {
-//   const isClickInside = event.target.closest(".relative");
-//   if (!isClickInside) {
-//     document.querySelectorAll(".homeDropdown").forEach((drop) => {
-//       drop.classList.add("hidden");
-//     });
-//   }
-// });
+dropdownButton.forEach((button) => {
+  button.addEventListener("click", function (e) {
+    e.stopPropagation();
+    toggleDropdown();
+  });
+});
 
 // scroll to the top
 // const scrollToTop = document.getElementById("arrowScroll");
