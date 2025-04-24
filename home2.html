@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../src/css/output.css">
     <link rel="shortcut icon" href="./public/assets/images/siteLogo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -1288,32 +1291,23 @@
 
                     <!-- right container start -->
                     <div class="md:w-full lg:w-1/2">
-                        <div
-                            class="flex items-center justify-between w-full h-72 lg:h-80 bg-[url('../../public/assets/images/bestPropertiesLeftImg1.jpg')] rounded-2xl">
-                            <!-- previous button start  -->
-                            <div class="p-2 flex items-center rounded-full bg-neutral-600 shadow-2xl">
-                                <button>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                        class="size-6 cursor-pointer">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 19.5 8.25 12l7.5-7.5" />
-                                    </svg>
-                                </button>
+                        <div class="simple-slider-wrapper">
+                            <div class="control_prev"><span>&#10094;</span></div>
+                            <div class="control_next"><span>&#10095;</span></div>
+                            <div class="simple-slider-overflow-hidden rounded-2xl">
+                                <ul class="simple-slider">
+                                    <li class="simple-slider-element 1" style="background: #aaa;">
+                                        <img src="./public/assets/images/bestPropertiesLeftImg1.jpg"
+                                            class="slide-image" />
+                                    </li>
+                                    <li class="simple-slider-element 2" style="background: #aaa;">
+                                        <img src="./public/assets/images/discoverPlaceBgImg.jpeg" class="slide-image" />
+                                    </li>
+                                    <li class="simple-slider-element 3" style="background: #aaa;">
+                                        <img src="./public/assets/images/home2HeroBgImg.jpeg" class="slide-image" />
+                                    </li>
+                                </ul>
                             </div>
-                            <!-- previous button end  -->
-                            <!-- next button start  -->
-                            <div class="p-2 flex items-center rounded-full bg-neutral-600 shadow-2xl">
-                                <button>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" height="20"
-                                        viewBox="0 0 24 24" stroke-width="1.5" fill="black" stroke="currentColor"
-                                        class="size-6 cursor-pointer">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <!-- next button end  -->
                         </div>
                         <!-- left bottom boxes start  -->
                         <div class="mt-5 flex flex-col sm:flex-row gap-5">
@@ -1685,9 +1679,11 @@
     </footer>
     <!-- footer section end -->
 
-    <script src="../src/js/main.js"></script>
     <!-- Font Awesome CDN for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="../src/js/main.js"></script>
 </body>
 
 </html>
