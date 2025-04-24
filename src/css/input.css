@@ -17,11 +17,21 @@
   }
 }
 
-.swiper {
-  width: 100%;
-  height: auto;
+.owl-carousel {
+  position: relative;
+  margin-top: 30px;
 }
 
-.swiper-wrapper {
-  width: 35% !important;
+.owl-nav {
+  position: absolute;
+  top: -60px;
+  left: 10px;
+}
+
+.owl-dots {
+  margin-top: 30px;
+}
+
+.owl-next {
+  background: #3286f0;
 }

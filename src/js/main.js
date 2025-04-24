@@ -32,6 +32,32 @@ dropdownButton.forEach((button) => {
   });
 });
 
+// slider
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  stagePadding: 15,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  // autoplayHoverPause: true,
+  navText: [
+    '<span class="uk-margin-small-right uk-icon" uk-icon="icon: chevron-left"></span>',
+    '<span class="uk-margin-small-left uk-icon" uk-icon="icon: chevron-right"></span>',
+  ],
+  responsive: {
+    320: {
+      items: 1,
+    },
+    640: {
+      items: 2,
+    },
+    1024: {
+      items: 3,
+    },
+  },
+});
+
 // scroll to the top
 // const scrollToTop = document.getElementById("arrowScroll");
 
@@ -66,36 +92,3 @@ document.querySelectorAll('[id^="question"]').forEach(function (button, index) {
     }
   });
 });
-
-// swiper js library
-// const swiper = new Swiper(".swiper", {
-//   // Optional parameters
-//   // slidesPerView: 3,
-//   // spaceBetween: 10,
-//   direction: "vertical",
-//   loop: true,
-//   // autoplay: {
-//   //   delay: 3000,
-//   //   disableOnInteraction: false,
-//   // },
-//   // speed: 500,
-
-//   // If we need pagination
-//   pagination: {
-//     el: ".swiper-pagination",
-//     //   clickable: true,
-//     //   dynamicBullets: true,
-//     //   type: "bullets",
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: ".swiper-scrollbar",
-//   },
-// });
