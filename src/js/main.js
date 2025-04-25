@@ -59,6 +59,9 @@ $(".owl-carousel").owlCarousel({
     1024: {
       items: 3,
     },
+    1536: {
+      items: 4,
+    },
   },
 });
 
