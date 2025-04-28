@@ -32,6 +32,17 @@ dropdownButton.forEach((button) => {
   });
 });
 
+// Hide dropdown when clicking outside
+document.addEventListener("click", function (e) {
+  const isClickInside =
+    dropdown.contains(e.target) ||
+    [...dropdownButton].some((button) => button.contains(e.target));
+  if (!isClickInside) {
+    dropdown.classList.add("hidden");
+    arrow.classList.remove("rotate-180");
+  }
+});
+
 // slider
 $(".owl-carousel").owlCarousel({
   loop: true,
@@ -165,22 +176,22 @@ jQuery(document).ready(function ($) {
 });
 
 // scroll to the top
-// const scrollToTop = document.getElementById("arrowScroll");
+const scrollToTop = document.getElementById("arrowScroll");
 
-// window.onscroll = () => {
-//   if (window.scrollY > 500) {
-//     arrowScroll.style.opacity = "1";
-//   } else {
-//     arrowScroll.style.opacity = "0";
-//   }
-// };
+window.onscroll = () => {
+  if (window.scrollY > 500) {
+    arrowScroll.style.opacity = "1";
+  } else {
+    arrowScroll.style.opacity = "0";
+  }
+};
 
-// scrollToTop.addEventListener("click", function () {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: "smooth",
-//   });
-// });
+scrollToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
 
 // accordian logic
 // JavaScript to toggle the answers and rotate the arrows
