@@ -931,6 +931,9 @@
   .bg-\[url\(\'\.\.\/\.\.\/public\/assets\/images\/townHouseImg\.jpeg\'\)\] {
     background-image: url('../../public/assets/images/townHouseImg.jpeg');
   }
+  .bg-\[url\(\'\/assets\/images\/heroBgImage\.webp\'\)\] {
+    background-image: url('/assets/images/heroBgImage.webp');
+  }
   .bg-cover {
     background-size: cover;
   }
