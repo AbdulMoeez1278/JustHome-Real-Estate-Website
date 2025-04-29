@@ -420,6 +420,9 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .size-4 {
     width: calc(var(--spacing) * 4);
     height: calc(var(--spacing) * 4);
@@ -477,6 +480,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
   }
   .w-2\/3 {
     width: calc(2/3 * 100%);
@@ -549,6 +555,12 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .rotate-0 {
     rotate: 0deg;
@@ -835,6 +847,18 @@
   .bg-zinc-700 {
     background-color: var(--color-zinc-700);
   }
+  .bg-\[url\(\'\.\'\)\] {
+    background-image: url('.');
+  }
+  .bg-\[url\(\'\.\.\/\'\)\] {
+    background-image: url('../');
+  }
+  .bg-\[url\(\'\.\.\/\.\.\/\'\)\] {
+    background-image: url('../../');
+  }
+  .bg-\[url\(\'\.\.\/\.\.\/assets\/images\/findPropertyLeftImg1\.jpg\'\)\] {
+    background-image: url('../../assets/images/findPropertyLeftImg1.jpg');
+  }
   .bg-\[url\(\'\.\.\/\.\.\/public\/assets\/images\/appartmentImg\.jpeg\'\)\] {
     background-image: url('../../public/assets/images/appartmentImg.jpeg');
   }
@@ -931,8 +955,26 @@
   .bg-\[url\(\'\.\.\/\.\.\/public\/assets\/images\/townHouseImg\.jpeg\'\)\] {
     background-image: url('../../public/assets/images/townHouseImg.jpeg');
   }
+  .bg-\[url\(\'\.\.\/assets\/images\/findPropertyLeftImg1\.jpg\'\)\] {
+    background-image: url('../assets/images/findPropertyLeftImg1.jpg');
+  }
+  .bg-\[url\(\'\.\/\'\)\] {
+    background-image: url('./');
+  }
+  .bg-\[url\(\'\.\/assets\/images\/findPropertyLeftImg1\.jpg\'\)\] {
+    background-image: url('./assets/images/findPropertyLeftImg1.jpg');
+  }
+  .bg-\[url\(\'\/assets\/images\/findPropertyLeftImg1\.jpg\'\)\] {
+    background-image: url('/assets/images/findPropertyLeftImg1.jpg');
+  }
   .bg-\[url\(\'\/assets\/images\/heroBgImage\.webp\'\)\] {
     background-image: url('/assets/images/heroBgImage.webp');
+  }
+  .bg-\[url\(\'public\'\)\] {
+    background-image: url('public');
+  }
+  .bg-\[url\(\'public\/\'\)\] {
+    background-image: url('public/');
   }
   .bg-cover {
     background-size: cover;
@@ -1190,6 +1232,10 @@
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
@@ -1202,6 +1248,15 @@
     --tw-backdrop-opacity: opacity(85%);
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-filter {
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .transition-all {
     transition-property: all;
@@ -2256,6 +2311,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -2399,6 +2459,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
