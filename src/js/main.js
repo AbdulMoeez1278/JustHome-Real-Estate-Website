@@ -34,9 +34,7 @@ dropdownButton.forEach((button) => {
 
 // Hide dropdown when clicking outside
 document.addEventListener("click", function (e) {
-  const isClickInside =
-    dropdown.contains(e.target) ||
-    [...dropdownButton].some((button) => button.contains(e.target));
+  const isClickInside = dropdown.contains(e.target);
   if (!isClickInside) {
     dropdown.classList.add("hidden");
     arrow.classList.remove("rotate-180");
