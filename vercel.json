@@ -9,8 +9,5 @@
       "src": "src/css/output.css",
       "use": "@vercel/static"
     }
-  ],
-  "routes": [
-    { "src": "/", "dest": "/index.html" }
   ]
 }
